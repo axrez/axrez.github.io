@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: axrez/axrez.github.io
 media_folder: static/assets
 public_folder: /static/assets
 collections:
@@ -8,7 +9,7 @@ collections:
     files:
     - label: "Front Page"
       name: "front-page"
-      file: "src/pages/index.md"
+      file: "src/markdown/index.md"
       fields:
       - { label: Title, name: title, widget: string }
       - { label: Intro, name: intro, widget: markdown}

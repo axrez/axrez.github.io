@@ -1,5 +1,5 @@
 ---
 title: Hippety hoppity
-intro: This test i my interlectiual property
+intro: This test is my interlectiual property
+path: src/markdown/index.md
 ---
-

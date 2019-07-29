@@ -41,5 +41,6 @@ module.exports = {
         commonmark: true,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

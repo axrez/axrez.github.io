@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: axrez/axrez.github.io
-media_folder: static/assets
+media_folder: src/images
 public_folder: /static/assets
 collections:
   - name: "pages"
@@ -12,6 +12,6 @@ collections:
       name: "front-page"
       file: "src/markdown/index.md"
       fields:
+      - { label: Path - Advanced users only, name: path, widget: string }
       - { label: Title, name: title, widget: string }
       - { label: Intro, name: intro, widget: markdown }
-      - { label: Path - Advanced users only, name: path, widget: string }

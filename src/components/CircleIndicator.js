@@ -16,7 +16,7 @@ export const CircleIndicator = styled.div`
 
       ${props.scrollDistance < 600 &&
         css`
-          transform: scale(10);
+          transform: scale(13);
           z-index: 100;
         `}
     `}
@@ -28,7 +28,7 @@ export const CircleIndicator = styled.div`
       ${props.scrollDistance > 750 &&
         props.scrollDistance < 1350 &&
         css`
-          transform: scale(10) translateY(-1.7vh);
+          transform: scale(13) translateY(-1.35vh);
           z-index: 100;
         `}
     `}
@@ -40,7 +40,7 @@ export const CircleIndicator = styled.div`
       ${props.scrollDistance > 1500 &&
         props.scrollDistance < 2100 &&
         css`
-          transform: scale(10) translateY(-3.5vh);
+          transform: scale(13) translateY(-2.7vh);
           z-index: 100;
         `}
     `}
@@ -52,7 +52,7 @@ export const CircleIndicator = styled.div`
       ${props.scrollDistance > 2250 &&
         props.scrollDistance < 2850 &&
         css`
-          transform: scale(10) translateY(-5.25vh);
+          transform: scale(13) translateY(-4.05vh);
           z-index: 100;
         `}
     `};

@@ -10,7 +10,7 @@ import LandingpageImage from '../components/img/landingpage'
 
 const IndexPage = ({ data }) => {
   const useCurrentScrollDistance = () => {
-    const [scrollDist, setScrollDist] = useState(window.pageYOffset || 0)
+    const [scrollDist, setScrollDist] = useState(0)
     useEffect(() => {
       if (typeof window !== `undefined`) {
         window.addEventListener('scroll', e => setScrollDist(e.pageY))

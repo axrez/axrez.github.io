@@ -45,6 +45,9 @@ const Main = styled.main`
   display: grid;
   align-items: center;
   justify-items: center;
+
+  /* remove this when the page is populated with data */
+  height: 100vh;
 `
 
 const TopTitle = styled.h1`

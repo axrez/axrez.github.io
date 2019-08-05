@@ -14,8 +14,8 @@ const IndexPage = ({ data }) => {
       <Layout>
         <SEO title="Home" />
         {/* <LandingpageImage style={{ width: '100vw', zIndex: -100 }} /> */}
-        {/* <h1>{frontmatter.title}</h1>
-        <p>{frontmatter.intro}</p> */}
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.intro}</p>
         <p style={{ marginBottom: '40rem' }}>
           Lorem ipsum dolor sit amet consectetur adipiscing elit auctor,
           convallis cras vulputate felis himenaeos nisi dictum mollis metus,

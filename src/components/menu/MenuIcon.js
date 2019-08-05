@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 
 const MenuIcon = ({ rotated = false, color = '#000', click }) => (
   <MenuButton type="button" onClick={() => click()}>
-    <MenuBar top="true" color={color} rotate={rotated} />
-    <MenuBar mid="true" color={color} rotate={rotated} />
-    <MenuBar bottom="true" color={color} rotate={rotated} />
+    <MenuBar top="true" color={color} rotate={rotated ? 'true' : ''} />
+    <MenuBar mid="true" color={color} rotate={rotated ? 'true' : ''} />
+    <MenuBar bottom="true" color={color} rotate={rotated ? 'true' : ''} />
   </MenuButton>
 )
 

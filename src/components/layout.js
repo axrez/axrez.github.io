@@ -21,13 +21,16 @@ const Layout = ({ children }) => {
   const { siteMetadata: meta } = data.site
   return (
     <Main>
-      <div>
-        <TopTitle>{meta.title}</TopTitle>
-        <TopTitleDeco />
-      </div>
-
       <MenuContainer />
-      {children}
+
+      <ContentWrapper>
+        <div id="Home">
+          <TopTitle>{meta.title}</TopTitle>
+          <TopTitleDeco />
+        </div>
+
+        {children}
+      </ContentWrapper>
     </Main>
   )
 }
@@ -41,17 +44,21 @@ export default Layout
 const Main = styled.main`
   position: fixed;
   overflow-x: hidden;
-  padding: 8rem 0;
+  height: 100vh;
   display: grid;
   align-items: center;
   justify-items: center;
 
-  /* remove this when the page is populated with data */
-  height: 100vh;
+  @media screen and (min-width: 960px) {
+    grid-template-columns: 20vw 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: 'menu content';
+  }
 `
 
 const TopTitle = styled.h1`
-  width: 100vw;
+  width: 100%;
+  padding-top: 8rem;
   text-align: center;
   font-size: 2.8rem;
   font-weight: 300;
@@ -66,4 +73,15 @@ const TopTitleDeco = styled.div`
   height: 1.4rem;
   margin: 0 calc(50vw - 12rem);
   z-index: -1;
+
+  @media screen and (min-width: 960px) {
+    margin: 0 calc(40vw - 12rem);
+  }
+`
+
+const ContentWrapper = styled.div`
+  grid-area: content;
+  @media screen and (min-width: 960px) {
+    width: 80vw;
+  }
 `

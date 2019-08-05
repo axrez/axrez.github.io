@@ -19,6 +19,7 @@ const LandingpageImage = () => {
     <Img
       fluid={data.landingpageImg.childImageSharp.fluid}
       alt="Background image"
+      style={{ zIndex: -100 }}
     />
   )
 }

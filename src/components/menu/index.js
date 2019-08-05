@@ -6,9 +6,13 @@ import MenuIcon from './MenuIcon'
 const MenuContainer = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  if (!document) {
+    document.getElementById('Home').scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
-      <Menu open={isOpen} />
+      <Menu open={isOpen} close={() => setIsOpen(false)} />
       <MenuIcon
         rotated={isOpen}
         click={() => setIsOpen(!isOpen)}

@@ -7,8 +7,7 @@ text: >-
   or two of before university. I would describe myself as engaged, curious,
   responsible, and with a drive to learn. I spend my free time running,
   programming and playing Magic the Gathering (an awesome trading card game).
-
-
+  
 
   My interest for programming was sparked during my time in high school and
   especially for web-development. React has occupied my attention since in the

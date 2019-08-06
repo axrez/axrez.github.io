@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Menu from './Menu'
 import MenuIcon from './MenuIcon'
@@ -6,9 +6,11 @@ import MenuIcon from './MenuIcon'
 const MenuContainer = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  if (!document) {
-    document.getElementById('Home').scrollIntoView({ behavior: 'smooth' })
-  }
+  useEffect(() => {
+    if (document.getElementById('Home')) {
+      document.getElementById('Home').scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [])
 
   return (
     <>

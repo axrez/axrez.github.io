@@ -75,6 +75,7 @@ const MenuBG = styled(animated.ul)`
   display: grid;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 `
 
 const MenuSidebar = styled.div`

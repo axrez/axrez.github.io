@@ -9,13 +9,6 @@ collections:
     label: "Pages"
     delete: false
     files:
-    - label: "About"
-      name: "about"
-      file: "src/markdown/about.md"
-      fields:
-      - { label: Path - Advanced users only, name: path, widget: string }
-      - { label: Head, name: head, widget: string }
-      - { label: Text, name: text, widget: markdown }
     - label: "Front Page"
       name: "front-page"
       file: "src/markdown/index.md"
@@ -23,3 +16,10 @@ collections:
       - { label: Path - Advanced users only, name: path, widget: string }
       - { label: Title, name: title, widget: string }
       - { label: Intro, name: intro, widget: markdown }         
+    - label: "About"
+      name: "about"
+      file: "src/markdown/about.md"
+      fields:
+      - { label: Path - Advanced users only, name: path, widget: string }
+      - { label: Head, name: head, widget: string }
+      - { label: Text, name: text, widget: markdown }

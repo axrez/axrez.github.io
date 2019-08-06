@@ -39,6 +39,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         commonmark: true,
+        gfm: true,
       },
     },
     `gatsby-plugin-styled-components`,

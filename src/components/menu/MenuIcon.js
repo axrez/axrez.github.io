@@ -24,6 +24,7 @@ const MenuButton = styled.button`
   background: inherit;
   height: 3rem;
   width: 3rem;
+  z-index: 11;
   @media screen and (min-width: 960px) {
     display: none;
   }

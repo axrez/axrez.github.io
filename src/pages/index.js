@@ -26,14 +26,11 @@ const IndexPage = ({ data }) => {
             id="About"
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
-              __html: convertMDLinks(AboutFront.text),
+              __html: About.html,
             }}
           ></MainText>
           <SubHeader>{WorkFront.head}</SubHeader>
-          <MainText
-            id="Work"
-            dangerouslySetInnerHTML={{ __html: convertMDLinks(WorkFront.text) }}
-          />
+          <MainText id="Work" dangerouslySetInnerHTML={{ __html: Work.html }} />
         </Wrapper>
       </Layout>
     </>
@@ -61,16 +58,16 @@ export const pageQuery = graphql`
     ) {
       frontmatter {
         head
-        text
       }
+      html
     }
     Work: markdownRemark(
       frontmatter: { path: { eq: "src/markdown/work.md" } }
     ) {
       frontmatter {
         head
-        text
       }
+      html
     }
   }
 `

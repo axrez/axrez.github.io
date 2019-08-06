@@ -22,10 +22,11 @@ collections:
       fields:
       - { label: Path - Advanced users only, name: path, widget: string }
       - { label: Head, name: head, widget: string }
-      - { label: Text, name: text, widget: markdown }
+      - { label: Body, name: body, widget: markdown }
     - label: "Work"
       name: "work"
       file: "src/markdown/work.md"
+      fields:
       - { label: Path - Advanced users only, name: path, widget: string }
       - { label: Head, name: head, widget: string }
       - { label: Body, name: body, widget: markdown }

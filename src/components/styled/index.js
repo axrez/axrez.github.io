@@ -3,11 +3,23 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 export const Wrapper = styled.div`
+  max-width: 960px;
   margin: 2rem;
 `
 
 export const MainText = styled.p`
-  color: hsla(0, 0, 0, 0.3);
+  color: hsla(0, 0%, 0%, 0.8);
+  font-size: 1.05rem;
+  & a {
+    text-decoration: none;
+    color: inherit;
+    &:visited {
+      color: hsla(29, 1%, 30%, 1);
+    }
+    &:hover {
+      color: hsla(29, 100%, 49%, 0.62);
+    }
+  }
 `
 
 export const SubTitle = styled.h3`

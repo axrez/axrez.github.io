@@ -81,6 +81,10 @@ const TopTitleDeco = styled.div`
 
 const ContentWrapper = styled.div`
   grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media screen and (min-width: 960px) {
     width: 80vw;
   }

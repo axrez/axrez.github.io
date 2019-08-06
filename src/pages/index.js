@@ -4,15 +4,11 @@ import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import LandingpageImage from '../components/img/landingpage'
-import convertMDLinks from '../utils/convertMDLinks'
 import { MainText, SubTitle, SubHeader, Wrapper } from '../components/styled'
 
 const IndexPage = ({ data }) => {
   const { Title, About, Work } = data
   const { frontmatter: TitleFront } = Title
-  const { frontmatter: AboutFront } = About
-  const { frontmatter: WorkFront } = Work
 
   return (
     <>
@@ -21,7 +17,7 @@ const IndexPage = ({ data }) => {
         {/* <LandingpageImage style={{ width: '100vw', zIndex: -100 }} /> */}
         <SubTitle>{TitleFront.intro}</SubTitle>
         <Wrapper>
-          <SubHeader>{AboutFront.head}</SubHeader>
+          <SubHeader>{About.frontmatter.head}</SubHeader>
           <MainText
             id="About"
             // eslint-disable-next-line react/no-danger
@@ -29,7 +25,7 @@ const IndexPage = ({ data }) => {
               __html: About.html,
             }}
           ></MainText>
-          <SubHeader>{WorkFront.head}</SubHeader>
+          <SubHeader>{Work.frontmatter.head}</SubHeader>
           <MainText id="Work" dangerouslySetInnerHTML={{ __html: Work.html }} />
         </Wrapper>
       </Layout>

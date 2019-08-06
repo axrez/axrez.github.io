@@ -9,9 +9,10 @@ import convertMDLinks from '../utils/convertMDLinks'
 import { MainText, SubTitle, SubHeader, Wrapper } from '../components/styled'
 
 const IndexPage = ({ data }) => {
-  const { Title, About } = data
+  const { Title, About, Work } = data
   const { frontmatter: TitleFront } = Title
   const { frontmatter: AboutFront } = About
+  const { frontmatter: WorkFront } = Work
 
   return (
     <>
@@ -20,7 +21,7 @@ const IndexPage = ({ data }) => {
         {/* <LandingpageImage style={{ width: '100vw', zIndex: -100 }} /> */}
         <SubTitle>{TitleFront.intro}</SubTitle>
         <Wrapper>
-          <SubHeader>About</SubHeader>
+          <SubHeader>{AboutFront.head}</SubHeader>
           <MainText
             id="About"
             // eslint-disable-next-line react/no-danger
@@ -28,7 +29,11 @@ const IndexPage = ({ data }) => {
               __html: convertMDLinks(AboutFront.text),
             }}
           ></MainText>
-          <SubHeader id="Work">Work</SubHeader>
+          <SubHeader>{WorkFront.head}</SubHeader>
+          <MainText
+            id="Work"
+            dangerouslySetInnerHTML={{ __html: convertMDLinks(WorkFront.text) }}
+          />
         </Wrapper>
       </Layout>
     </>
@@ -53,6 +58,14 @@ export const pageQuery = graphql`
     }
     About: markdownRemark(
       frontmatter: { path: { eq: "src/markdown/about.md" } }
+    ) {
+      frontmatter {
+        head
+        text
+      }
+    }
+    Work: markdownRemark(
+      frontmatter: { path: { eq: "src/markdown/work.md" } }
     ) {
       frontmatter {
         head

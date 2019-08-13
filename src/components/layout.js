@@ -1,17 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-
 import styled from 'styled-components'
 
 import './layout.css'
+import MenuContainer from './menu'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,10 +18,20 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const { siteMetadata: meta } = data.site
   return (
-    <>
-      <Main>{children}</Main>
-    </>
+    <Main>
+      <MenuContainer />
+
+      <ContentWrapper>
+        <div id="Home">
+          <TopTitle>{meta.title}</TopTitle>
+          <TopTitleDeco />
+        </div>
+
+        {children}
+      </ContentWrapper>
+    </Main>
   )
 }
 
@@ -40,14 +43,49 @@ export default Layout
 
 const Main = styled.main`
   position: fixed;
-  left: 0;
-  top: 0;
-  padding: 8rem 0;
+  overflow-x: hidden;
+  height: 100vh;
   display: grid;
   align-items: center;
   justify-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #dfdfdf;
+
+  @media screen and (min-width: 960px) {
+    grid-template-columns: 20vw 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas: 'menu content';
+  }
+`
+
+const TopTitle = styled.h1`
+  width: 100%;
+  padding-top: 8rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 300;
+`
+
+const TopTitleDeco = styled.div`
+  position: relative;
+  top: -2.3rem;
+  background-color: #fa7800;
+  opacity: 0.38;
+  width: 24rem;
+  height: 1.4rem;
+  margin: 0 calc(50vw - 12rem);
   z-index: -1;
+
+  @media screen and (min-width: 960px) {
+    margin: 0 calc(40vw - 12rem);
+  }
+`
+
+const ContentWrapper = styled.div`
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 960px) {
+    width: 80vw;
+  }
 `

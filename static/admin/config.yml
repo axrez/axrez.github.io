@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: axrez/axrez.github.io
+  branch: od
 media_folder: src/images
 public_folder: /static/assets
 collections:
@@ -14,4 +15,18 @@ collections:
       fields:
       - { label: Path - Advanced users only, name: path, widget: string }
       - { label: Title, name: title, widget: string }
-      - { label: Intro, name: intro, widget: markdown }
+      - { label: Intro, name: intro, widget: markdown }         
+    - label: "About"
+      name: "about"
+      file: "src/markdown/about.md"
+      fields:
+      - { label: Path - Advanced users only, name: path, widget: string }
+      - { label: Head, name: head, widget: string }
+      - { label: Body, name: body, widget: markdown }
+    - label: "Work"
+      name: "work"
+      file: "src/markdown/work.md"
+      fields:
+      - { label: Path - Advanced users only, name: path, widget: string }
+      - { label: Head, name: head, widget: string }
+      - { label: Body, name: body, widget: markdown }

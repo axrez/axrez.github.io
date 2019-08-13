@@ -4,7 +4,7 @@ head: About
 ---
 My name is Emil. I'm 20 years old and live in the town of Slagelse. I've
 finished high school this year (the summer of 2019) and will be taking a year
-or two of before university. I would describe myself as engaged, curious,
+or two off before university. I would describe myself as engaged, curious,
 responsible, and with a drive to learn. I spend my free time running,
 programming and playing Magic the Gathering (an awesome trading card game).
 

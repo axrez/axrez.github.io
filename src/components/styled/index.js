@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 export const Wrapper = styled.div`
   max-width: 960px;
   margin: 2rem;
+  margin-top: 5rem;
 `
 
 export const MainText = styled.p`
@@ -91,6 +92,25 @@ export const ContactBubble = styled.a`
     & svg {
       fill: hsla(29, 100%, 49%, 0.62);
     }
+  }
+`
+
+export const DownloadButton = styled.button`
+  color: #444;
+  border: none;
+  background: none;
+  border-bottom: hsla(29, 100%, 49%, 0.45) 0.6rem solid;
+  padding: 0.6rem;
+  padding-bottom: 0;
+  height: 2rem;
+  font-weight: 200;
+  margin: 0 2rem;
+
+  & a {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-decoration: none;
+    color: inherit;
   }
 `
 
